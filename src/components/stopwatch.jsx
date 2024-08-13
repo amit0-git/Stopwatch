@@ -86,13 +86,18 @@ function Stopwatch() {
 
             </div>
 
-            <div className={styles.lapTimes} style={ laps.length >0 ? {border:'1px solid black'}:{border:'none',backgroundColor:"unset"}}>
-                {laps.length > 0 && <h3>Laps:</h3>}
-                <ul>
-                    {laps.map((lap, index) => (
-                        <li key={index}>Lap {index + 1}: {lap} </li>
-                    ))}
-                </ul>
+            <div className={styles.lapTimes} style={laps.length > 0 ? { border: '1px solid black' } : { border: 'none', backgroundColor: "unset" }}>
+                {laps.length > 0 && <h3>Laps</h3>}
+
+
+                <div className={styles.ulWrap} style={laps.length > 0 ? { border: '1px solid' } : { border: 'none', backgroundColor: "unset" }}>
+                    <ul>
+                        {laps.map((lap, index) => (
+                            <li key={index}><b>Lap {index + 1}</b>: {lap} </li>
+                        ))}
+                    </ul>
+                </div>
+
             </div>
 
         </div>

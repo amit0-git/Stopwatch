@@ -1,6 +1,8 @@
 /* stopwatch.module.css */
 :root{
     --bg-color: rgb(255, 249, 239);
+    --height:350px;
+    --width:400px;
 }
 body{
     display: flex;
@@ -11,8 +13,8 @@ body{
     
 }
 .stopwatchWrapper{
-    max-width: 400px;
-    max-width: 100%;
+    
+    
   
     
     text-align: center;
@@ -24,7 +26,7 @@ body{
     border: 1px solid gray;
     border-radius: 10px;
     
-    max-width: 100%; 
+    max-width:var(--width);
     margin: 0 auto;
     padding: 20px;
     background-color: var(--bg-color);
@@ -32,7 +34,8 @@ body{
     text-align: center;
 }
 
-.display {
+.stopwatch .display {
+    width: auto;
     font-size: 4rem;
     text-align: center;
     font-family: monospace;
@@ -40,10 +43,11 @@ body{
     color: gray;
 }
 
-.controls {
+.stopwatch .controls {
     display: flex;
     justify-content: space-around; 
     margin-top: 10px;
+
 
     
 }
@@ -96,13 +100,27 @@ button {
     background-color: rgb(114, 114, 242);
     color: white;
 }
+
 .lapTimes {
     margin-top: 20px;
-    
+    border-color: #b3b9af !important;
     border-radius: 10px;
     padding:10px;
-    background-color:var(--bg-color);
+   
+    background-color: #e9ffdb;
 
+    
+}
+
+
+.lapTimes .ulWrap{
+    border-color: #b3b9af !important;
+  
+    overflow-y: auto;
+    max-height: var(--height);
+    min-height: var(--height);
+
+    background-color:var(--bg-color);
     
 }
 
@@ -110,6 +128,8 @@ button {
     margin: 0;
     font-family: monospace;
     font-size: 30px;
+    padding: 5px 0;
+    color: rgb(51, 47, 47);
 }
 
 .lapTimes ul {
@@ -136,3 +156,30 @@ button {
    width: 16px;
     height: 16px; 
 }
+
+
+
+::-webkit-scrollbar {
+    width: 10px;
+
+   
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background:var(--bg-color);
+
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+   
+
+
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
