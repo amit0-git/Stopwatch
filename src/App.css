@@ -1,0 +1,13 @@
+
+body{
+    margin: 0;
+    padding: 0;
+}
+h1{
+    font-family: monospace;
+    margin: 0;
+    text-align: center;
+    font-size: 40px;
+    margin:20px 0;
+    color: rgb(82, 82, 82);
+}
